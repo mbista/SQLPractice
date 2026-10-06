@@ -1,0 +1,2 @@
+# SQLPractice
+Practice for MSSQL
