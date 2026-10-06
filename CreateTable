@@ -1,0 +1,12 @@
+IF OBJECT_ID('dbo.movies', 'U') IS NULL
+BEGIN
+    CREATE TABLE dbo.movies (
+        movie_id   INT IDENTITY(1,1), -- Auto-incrementing primary key
+        title      VARCHAR(255) NOT NULL,
+        release_yr INT NULL,
+        genre      VARCHAR(100) NULL,
+        
+        -- Explicitly naming your primary key constraint is best practice
+        CONSTRAINT PK_movies PRIMARY KEY CLUSTERED (movie_id)
+    );
+END;
